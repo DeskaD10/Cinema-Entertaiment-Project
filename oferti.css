@@ -1,0 +1,1073 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+/*-----------------HEADER---------------*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navbar {
+  position: fixed;
+  top: 60px;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  z-index: 999;
+}
+#header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-shadow: 3px 4px 3px rgb(250, 54, 54);
+  color: rgb(255, 255, 255);
+}
+#header span {
+  display: inline-block;
+  font-size: 100px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 3s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+#header img {
+  display: flex;
+  position: absolute;
+  z-index: -1;
+  height: 245px;
+}
+/*-----------------NAVIGATION---------------*/
+nav {
+  width: 100%;
+  background-color: rgb(255, 94, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+nav img {
+  width: 120px;
+  cursor: pointer;
+}
+
+nav .navigation {
+  display: flex;
+  align-items: center;
+}
+
+#menu-btn {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+#menu-close {
+  display: none;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav .navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav .navigation ul li {
+  list-style: none;
+  margin: 0 15px;
+  transition: transform 0.3s ease;
+}
+
+nav .navigation ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav .navigation ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+nav .navigation ul li a.active,
+nav .navigation ul li a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+nav .navigation ul li a.active::before,
+nav .navigation ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/*-----------------OFERTI---------------*/
+#oferti {
+  padding: 50px;
+  text-align: center;
+  background-color: #000000;
+}
+
+#oferti h2 {
+  color: #ffffff;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.oferti-boxes1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30px;
+  /* justify-content: space-between; */
+  gap: 1.7%;
+}
+.oferti-boxes1 h3,
+.oferti-boxes1 i {
+  margin-bottom: 10px;
+  color: rgb(255, 94, 0);
+}
+.oferti-boxes2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30px;
+  gap: 1.1%;
+}
+.oferti-boxes2 h3,
+.oferti-boxes2 i {
+  margin-bottom: 10px;
+  color: rgb(255, 94, 0);
+}
+.oferti-boxes3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30px;
+  gap: 2.9%;
+}
+.oferti-boxes3 h3,
+.oferti-boxes3 i {
+  margin-bottom: 10px;
+  color: rgb(255, 94, 0);
+}
+.oferti-promo {
+  text-align: start;
+  background: #fff;
+  height: 100%;
+  position: relative;
+  transition: filter 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid rgb(255, 94, 0);
+}
+.oferti-promo img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.oferti-promo .details {
+  padding: 15px;
+}
+
+.oferti-promo h6 {
+  color: #000000;
+}
+.oferti-promo .details i {
+  color: #ff6c00;
+  font-size: 14.5px;
+}
+.oferti-promo.active {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+.oferti-promo.blurred {
+  filter: blur(3px);
+  transition: filter 0.3s;
+}
+
+/*-----------------PROMO1---------------*/
+#promo1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background-color: black;
+}
+.promo1-picture-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.promo1-picture img {
+  max-width: 100%;
+  max-height: 550px;
+  border-radius: 10px;
+}
+
+.promo1-text {
+  font-size: 18px;
+  color: rgb(255, 94, 0);
+  margin: 20px;
+}
+
+.promo1-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.promo1-table {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th {
+  color: rgb(255, 94, 0);
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+td {
+  color: rgb(255, 255, 255);
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+strong {
+  color: red;
+}
+thead {
+  background-color: #f2f2f2;
+}
+
+th {
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.promo1-paragraph {
+  margin: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.promo1-paragraph p {
+  line-height: 1.5;
+  color: rgb(255, 94, 0);
+}
+.promo1-paragraph h2 {
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+.promo1-paragraph h2:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+/*-----------------PROMO2---------------*/
+#promo2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background-color: black;
+}
+.promo2-picture-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.promo2-picture img {
+  max-width: 100%;
+  max-height: 550px;
+  border-radius: 10px;
+}
+
+.promo2-text {
+  font-size: 18px;
+  color: rgb(255, 94, 0);
+  margin: 20px;
+}
+
+.promo2-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.promo2-price {
+  display: flex;
+  flex-direction: row;
+}
+
+.promo2-price img {
+  max-width: 50%;
+  border-radius: 10px;
+}
+
+.promo2-paragraph {
+  margin: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+.promo2-paragraph p {
+  color: rgb(255, 94, 0);
+}
+
+.promo2-paragraph h2 {
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+.promo2-paragraph h2:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+/*-----------------PROMO3---------------*/
+#promo3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background-color: black;
+}
+.promo3-picture-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.promo3-picture img {
+  width: 100%;
+  max-height: 550px;
+  border-radius: 10px;
+}
+.promo3-picture p {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+}
+.promo3-text {
+  font-size: 18px;
+  color: rgb(255, 94, 0);
+  margin: 20px;
+}
+
+.promo3-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo3-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.promo3-price div {
+  text-align: center;
+}
+
+.promo3-price img {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 10px;
+}
+
+.promo3-price p {
+  color: white;
+  margin-top: 10px;
+}
+.promo3-paragraph {
+  margin: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+.promo3-paragraph p {
+  color: rgb(255, 94, 0);
+}
+.promo3-paragraph h2 {
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+.promo3-paragraph h2:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+/*-----------------PROMO4---------------*/
+#promo4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: black;
+  overflow: hidden;
+}
+
+.promo4-picture img {
+  width: 100%;
+}
+
+.promo4-picture h2 {
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.promo4-picture h2:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+/*-----------------PROMO5---------------*/
+#promo5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background-color: black;
+}
+.promo5-picture-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.promo5-picture img {
+  width: 100%;
+  max-height: 550px;
+  border-radius: 10px;
+}
+.promo5-picture p {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+}
+.promo5-text {
+  font-size: 18px;
+  color: rgb(255, 94, 0);
+  margin: 20px;
+}
+
+.promo5-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.promo5-description h2 {
+  color: white;
+}
+
+.promo5-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.promo5-price div {
+  text-align: center;
+  width: 25%;
+}
+
+.promo5-price img {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 10px;
+}
+
+.promo5-price p {
+  color: white;
+  margin-top: 10px;
+}
+.promo5-paragraph {
+  margin: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.promo5-paragraph p {
+  line-height: 1.5;
+  color: rgb(255, 94, 0);
+}
+.promo5-paragraph h2 {
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+.promo5-paragraph h2:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+/*-----------------PROMO6---------------*/
+#promo6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  background-color: black;
+}
+.promo6-picture-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.promo6-picture img {
+  width: 100%;
+  max-height: 550px;
+  border-radius: 10px;
+}
+.promo6-picture p {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+}
+.promo6-text {
+  font-size: 18px;
+  color: rgb(255, 94, 0);
+  margin: 20px;
+}
+
+.promo6-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.promo6-description h2 {
+  color: white;
+}
+
+.promo6-price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.promo6-price div {
+  text-align: center;
+  width: 30%;
+  margin: 5px 10px;
+}
+
+.promo6-price img {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 10px;
+}
+
+.promo6-price p {
+  color: white;
+  margin-top: 10px;
+}
+.promo6-paragraph {
+  margin: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.promo6-paragraph p {
+  line-height: 1.5;
+  color: rgb(255, 94, 0);
+}
+.promo6-paragraph h2 {
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+.promo6-paragraph h2:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+/*-----------------PROMO7---------------*/
+#promo7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background-color: black;
+}
+.promo7-picture-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.promo7-picture img {
+  width: 100%;
+  max-height: 550px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.promo7-picture p {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+}
+.promo7-text {
+  font-size: 18px;
+  color: rgb(255, 94, 0);
+  margin: 20px;
+}
+
+.promo7-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.promo7-description h2 {
+  color: white;
+}
+.promo7-price1,
+.promo7-price2 {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.promo7-price1 div,
+.promo7-price2 div {
+  text-align: center;
+  width: 45%;
+  margin: 0 10px;
+}
+
+.promo7-price1 img,
+.promo7-price2 img {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.promo7-price1 p,
+.promo7-price2 p {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.promo7-paragraph {
+  margin: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.promo7-paragraph p {
+  line-height: 1.5;
+  color: rgb(255, 94, 0);
+}
+.promo7-paragraph h2 {
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+.promo7-paragraph h2:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+/*-----------------FOOTER---------------*/
+footer {
+  padding: 60px;
+  background: linear-gradient(rgba(15, 15, 14, 0.645), rgba(0, 0, 0, 0.897)),
+    url("Images/cinema-footer.jpg");
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  gap: 0.8%;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+footer .footer-col {
+  padding-bottom: 40px;
+  text-align: left;
+}
+footer .footer-col img {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+footer h3 {
+  color: white;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+footer li {
+  list-style: none;
+  color: #ffffff;
+  padding: 10px 0px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+footer li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+footer li:hover a {
+  color: rgb(255, 94, 0);
+}
+footer li:hover {
+  transform: scale(1.2);
+  color: rgb(255, 94, 0);
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
+  cursor: pointer;
+}
+footer .footer-col p {
+  color: #ffffffb9;
+  background-color: #6b6b6b8b;
+  border-radius: 5px;
+  padding: 15px 15px 15px 15px;
+  text-align: center;
+}
+.footer-col .contact-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-col .contact-logo h3 {
+  margin-right: 20px;
+}
+
+.footer-col .contact-logo img {
+  max-width: 215px;
+}
+
+footer .subscribe input,
+footer .subscribe textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #ffffff9f;
+}
+footer .subscribe a {
+  text-decoration: none;
+  font-size: 14.5px;
+  padding: 12px 15px;
+  background-color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+footer .subscribe a.red {
+  color: white;
+  background: rgb(255, 94, 0);
+  transition: 0.3s ease;
+}
+footer .subscribe a.red:hover {
+  color: rgb(0, 0, 0);
+  background: rgb(255, 94, 0);
+}
+footer .copyright {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+footer .copyright p {
+  color: #ffffffb9;
+}
+footer .copyright .links {
+  margin-top: 10px;
+}
+footer .copyright .links i {
+  background-color: rgb(255, 94, 0);
+  color: white;
+  padding: 10px 13px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+footer .copyright .links i:hover {
+  color: rgb(0, 0, 0);
+  background: rgb(255, 94, 0);
+}
+/*-----------------SCROLL-TO-TOP-BUTTON---------------*/
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  display: none;
+  padding: 10px;
+  color: #ffffff;
+  background-color: rgb(255, 94, 0);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 15px;
+}
+#scrollToTopBtn:hover {
+  color: #000000;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+/*-----------------@MEDIA---------------*/
+@media (max-width: 769px) {
+  .oferti-boxes1 i {
+    display: none;
+  }
+  .oferti-boxes1 {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+  }
+  .oferti-boxes2 i {
+    display: none;
+  }
+  .oferti-boxes2 {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+  }
+  .oferti-boxes3 i {
+    display: none;
+  }
+  .oferti-boxes3 {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+  }
+  .oferti-promo {
+    text-align: center;
+    margin: 10px;
+  }
+  footer {
+    padding: 30px;
+  }
+}
+@media (max-width: 475px) {
+  #menu-btn {
+    display: initial;
+  }
+  #menu-close {
+    display: initial;
+  }
+  nav {
+    padding: 0px 50px;
+  }
+  nav .navigation ul {
+    position: absolute;
+    top: 0;
+    right: -220px;
+    width: 220px;
+    height: 1920px;
+    background-color: rgba(255, 94, 0, 0.845);
+    backdrop-filter: blur(4.5px);
+    border: 3px solid rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: 0.3s ease;
+  }
+  nav .navigation ul.active {
+    right: 0;
+    z-index: 1001;
+  }
+  nav .navigation ul li {
+    padding: 20px 0px 20px 40px;
+    margin-left: 0;
+  }
+  nav .navigation ul li a {
+    color: black;
+  }
+  #menu-btn {
+    width: 45px;
+    height: 45px;
+    margin-right: 360px;
+  }
+  .promo1-text {
+    font-size: 16px;
+    color: rgb(255, 94, 0);
+    margin: 0px;
+  }
+  .promo1-paragraph {
+    margin: 0px;
+    font-size: 15px;
+  }
+  .promo2-text {
+    font-size: 16px;
+    color: rgb(255, 94, 0);
+    margin: 0px;
+  }
+  .promo2-paragraph {
+    margin: 0px;
+    font-size: 15px;
+  }
+  .promo3-text {
+    font-size: 16px;
+    color: rgb(255, 94, 0);
+    margin: 0px;
+  }
+  .promo3-paragraph {
+    margin: 0px;
+    font-size: 15px;
+  }
+  .promo3-price {
+    display: flex;
+    flex-direction: column;
+  }
+  .promo4-text {
+    font-size: 16px;
+    color: rgb(255, 94, 0);
+    margin: 0px;
+  }
+  .promo4-paragraph {
+    margin: 0px;
+    font-size: 15px;
+  }
+  .promo5-text {
+    font-size: 16px;
+    color: rgb(255, 94, 0);
+    margin: 0px;
+  }
+  .promo5-paragraph {
+    margin: 0px;
+    font-size: 15px;
+  }
+  .promo5-description {
+    margin-top: 20px;
+  }
+  .promo5-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .promo5-price div {
+    text-align: center;
+    width: 100%;
+  }
+  .promo6-text {
+    font-size: 16px;
+    color: rgb(255, 94, 0);
+    margin: 0px;
+  }
+  .promo6-paragraph {
+    margin: 0px;
+    font-size: 15px;
+  }
+  .promo6-description {
+    margin-top: 20px;
+  }
+  .promo6-description h2 {
+    text-align: center;
+  }
+  .promo6-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .promo6-price div {
+    text-align: center;
+    width: 100%;
+  }
+  .promo7-text {
+    font-size: 16px;
+    color: rgb(255, 94, 0);
+    margin: 0px;
+  }
+  .promo7-paragraph {
+    margin: 0px;
+    font-size: 15px;
+  }
+  .promo7-description {
+    margin-top: 20px;
+  }
+  .promo7-description h2 {
+    text-align: center;
+  }
+  .promo7-price1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .promo7-price1 div {
+    text-align: center;
+    width: 100%;
+  }
+  .promo7-price2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .promo7-price2 div {
+    text-align: center;
+    width: 100%;
+  }
+  footer .footer-col {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  footer .footer-col h3 {
+    color: rgb(255, 94, 0);
+    font-size: 25px;
+  }
+  footer li {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,444 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+/*-----------------HEADER---------------*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navbar {
+  position: fixed;
+  top: 60px;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  z-index: 999;
+}
+#header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-shadow: 3px 4px 3px rgb(250, 54, 54);
+  color: rgb(255, 255, 255);
+}
+#header span {
+  display: inline-block;
+  font-size: 100px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 3s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+#header img {
+  display: flex;
+  position: absolute;
+  z-index: -1;
+  height: 245px;
+}
+/*-----------------NAVIGATION---------------*/
+nav {
+  width: 100%;
+  background-color: rgb(255, 94, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+nav img {
+  width: 120px;
+  cursor: pointer;
+}
+
+nav .navigation {
+  display: flex;
+  align-items: center;
+}
+
+#menu-btn {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+#menu-close {
+  display: none;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav .navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav .navigation ul li {
+  list-style: none;
+  margin: 0 15px;
+  transition: transform 0.3s ease;
+}
+
+nav .navigation ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav .navigation ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+nav .navigation ul li a.active,
+nav .navigation ul li a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+nav .navigation ul li a.active::before,
+nav .navigation ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/*-----------------KONTAKTI---------------*/
+#contact-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: rgb(0, 0, 0);
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.social-medias {
+  padding: 20px;
+  text-align: center;
+}
+.social-medias h2 {
+  color: rgb(255, 94, 0);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 0.8;
+  margin-bottom: 16px;
+}
+.social-medias p {
+  color: #ffffff;
+  margin-bottom: 33px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgb(255, 94, 0);
+}
+
+.social-medias h3 {
+  color: #ffffff;
+}
+.social-medias i {
+  color: rgb(255, 94, 0);
+  margin: 10px;
+}
+.social-medias .links i:hover {
+  color: white;
+  cursor: pointer;
+}
+.contact-form {
+  width: 60%;
+  padding: 40px;
+  border-radius: 10px;
+}
+.contact-form label {
+  color: rgb(255, 94, 0);
+}
+
+.contact-form label,
+.contact-form button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-form button {
+  text-decoration: none;
+  font-size: 14.5px;
+  padding: 13px 35px;
+  font-weight: 600;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 94, 0);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  color: rgb(0, 0, 0);
+  background: rgba(255, 94, 0);
+  transition: 0.3s ease;
+}
+.map {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 5px solid rgb(255, 94, 0);
+  border-radius: 10px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+/*-----------------FOOTER---------------*/
+footer {
+  padding: 60px;
+  background: linear-gradient(rgba(15, 15, 14, 0.645), rgba(0, 0, 0, 0.897)),
+    url("Images/cinema-footer.jpg");
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  gap: 0.8%;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+footer .footer-col {
+  padding-bottom: 40px;
+  text-align: left;
+}
+footer .footer-col img {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+footer h3 {
+  color: white;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+footer li {
+  list-style: none;
+  color: #ffffff;
+  padding: 10px 0px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+footer li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+footer li:hover a {
+  color: rgb(255, 94, 0);
+}
+footer li:hover {
+  transform: scale(1.2);
+  color: rgb(255, 94, 0);
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
+  cursor: pointer;
+}
+footer .footer-col p {
+  color: #ffffffb9;
+  background-color: #6b6b6b8b;
+  border-radius: 5px;
+  padding: 15px 15px 15px 15px;
+  text-align: center;
+}
+.footer-col .contact-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-col .contact-logo h3 {
+  margin-right: 20px;
+}
+
+.footer-col .contact-logo img {
+  max-width: 215px;
+}
+
+footer .subscribe input,
+footer .subscribe textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #ffffff9f;
+}
+footer .subscribe a {
+  text-decoration: none;
+  font-size: 14.5px;
+  padding: 12px 15px;
+  background-color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+footer .subscribe a.red {
+  color: white;
+  background: rgb(255, 94, 0);
+  transition: 0.3s ease;
+}
+footer .subscribe a.red:hover {
+  color: rgb(0, 0, 0);
+  background: rgb(255, 94, 0);
+}
+footer .copyright {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+footer .copyright p {
+  color: #ffffffb9;
+}
+footer .copyright .links {
+  margin-top: 10px;
+}
+footer .copyright .links i {
+  background-color: rgb(255, 94, 0);
+  color: white;
+  padding: 10px 13px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+footer .copyright .links i:hover {
+  color: rgb(0, 0, 0);
+  background: rgb(255, 94, 0);
+}
+/*-----------------SCROLL-TO-TOP-BUTTON---------------*/
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  display: none;
+  padding: 10px;
+  color: #ffffff;
+  background-color: rgb(255, 94, 0);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 15px;
+}
+#scrollToTopBtn:hover {
+  color: #000000;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+/*-----------------@MEDIA---------------*/
+@media (max-width: 769px) {
+  #contact-page {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact-page {
+    align-items: center;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  footer {
+    padding: 30px;
+  }
+}
+@media (max-width: 475px) {
+  #menu-btn {
+    display: initial;
+  }
+  #menu-close {
+    display: initial;
+  }
+  nav {
+    padding: 0px 50px;
+  }
+  nav .navigation ul {
+    position: absolute;
+    top: 0;
+    right: -220px;
+    width: 220px;
+    height: 1920px;
+    background-color: rgba(255, 94, 0, 0.845);
+    backdrop-filter: blur(4.5px);
+    border: 3px solid rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: 0.3s ease;
+  }
+  nav .navigation ul.active {
+    right: 0;
+    z-index: 1001;
+  }
+  nav .navigation ul li {
+    padding: 20px 0px 20px 40px;
+    margin-left: 0;
+  }
+  nav .navigation ul li a {
+    color: black;
+  }
+  #menu-btn {
+    width: 45px;
+    height: 45px;
+    margin-right: 360px;
+  }
+  footer .footer-col {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  footer .footer-col h3 {
+    color: rgb(255, 94, 0);
+    font-size: 25px;
+  }
+  footer li {
+    font-size: 20px;
+  }
+}

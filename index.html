@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Най-новите кинопремиери, ексклузивни събития и уникални преживявания в КиноАрт Ентъртейнмънт. Гледайте любимите си филми в най-удобните зали с висококачествена техника и комфортни столове."
+    />
+    <meta
+      name="keywords"
+      content="Кино, филми, прожекции, премиери, кинобилети, Cinema Entertaiment, КиноАрт Ентъртейнмънт, киносалони, кинотеатър, холивудски блокбастъри, филмови новини, киномания, филмови събития, киноспектакли, емоционални филми, киножанрове, екшън, комедии, драми, фентъзи, научна фантастика, трилъри, романтика, ужаси, имена на филми, нови филми, топ филми, филми 2024, Къде да гледам филми, Закупи кинобилети"
+    />
+    <meta charset="UTF-8" />
+    <link rel="Icon" type="icon" href="Images/cinema-icon.jpg" />
+
+    <title>CINEMA</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-------------------HEADER------------------->
+    <section id="header">
+      <span style="--i: 1">C</span>
+      <span style="--i: 2">I</span>
+      <span style="--i: 3">N</span>
+      <span style="--i: 4">E</span>
+      <span style="--i: 5">M</span>
+      <span style="--i: 6">A</span>
+      <img src="Images/movie-intro.jpg" alt="movie-intro" width="100%" />
+    </section>
+    <!-------------------NAVIGATION------------------->
+    <nav>
+      <div class="navigation">
+        <ul class="nav_links">
+          <i id="menu-close" class="fa-solid fa-square-xmark"></i>
+          <li>
+            <a class="active" class="nav_link" href="index.html">Програма</a>
+          </li>
+          <li><a class="nav_link" href="za-nas.html">За нас</a></li>
+          <li><a class="nav_link" href="projekcii.html">Прожекции</a></li>
+          <li><a class="nav_link" href="oferti.html">Оферти</a></li>
+          <li><a class="nav_link" href="kontakti.html">Контакти</a></li>
+        </ul>
+        <img id="menu-btn" src="Images/IconMenu.png" alt="menu-button" />
+      </div>
+    </nav>
+    <!-------------------HOME-SLIDERS------------------->
+    <section id="upper-section">
+      <div class="slider-container">
+        <!-------------------SLIDER 1------------------->
+        <div class="slider-picture">
+          <img
+            src="Images/momicheto na milyr-film.jpg"
+            alt="Momicheto-na-milyr"
+            class="img-start"
+          />
+        </div>
+        <!-------------------SLIDER 2------------------->
+        <div class="slider-picture">
+          <img src="Images/wonka-film.jpg" alt="Wonka" class="img-start" />
+        </div>
+        <!-------------------SLIDER 3------------------->
+        <div class="slider-picture">
+          <img src="Images/chuma-film.jpg" alt="Chuma" class="img-start" />
+        </div>
+        <!-------------------SLIDER 4------------------->
+        <div class="slider-picture">
+          <img src="Images/Wish-film.jpg" alt="Jelanie" class="img-start" />
+        </div>
+        <!-------------------SLIDER 5------------------->
+        <div class="slider-picture">
+          <img
+            src="Images/pulsut-na-tanca-film.jpg"
+            alt="Pulsat-na-tanca"
+            class="img-start"
+          />
+        </div>
+        <!-------------------SLIDER 6------------------->
+
+        <div class="slider-picture">
+          <img
+            src="Images/popcorn-film.jpg"
+            alt="popcorn-promo"
+            class="img-start"
+          />
+        </div>
+        <!-------------------ARROW------------------->
+        <div class="arrow-container">
+          <div class="arrow" id="prev">&#10094;</div>
+          <div class="arrow" id="next">&#10095;</div>
+        </div>
+      </div>
+    </section>
+    <!-------------------PROGRAM------------------->
+    <section id="program">
+      <div class="program-view">
+        <div class="week">
+          <h2 onclick="refreshPage()">ПРОЖЕКЦИИ:</h2>
+          <script>
+            function refreshPage() {
+              location.reload();
+            }
+          </script>
+          <div class="day" id="Monday">ПН</div>
+          <div class="day" id="Tuesday">ВТ</div>
+          <div class="day" id="Wednesday">СР</div>
+          <div class="day" id="Thursday">ЧТ</div>
+          <div class="day" id="Friday">ПТ</div>
+          <div class="day" id="Saturday">СБ</div>
+          <div class="day" id="Sunday">НД</div>
+        </div>
+        <div class="line" id="filmLine">
+          <div
+            onclick="window.location.href='ferrari-film.html';"
+            class="films"
+          >
+            <img
+              src="Images/Ferrari.webp"
+              alt="Ferrari-film"
+              onmouseover="zoomIn(this)"
+              onmouseout="zoomOut(this)"
+            />
+          </div>
+          <div class="description">
+            <h3>FERRARI</h3>
+            <p>
+              <i class="fa-solid fa-calendar-days"></i> ПРЕМИЕРНА ДАТА: 05
+              януари 2024
+            </p>
+            <br />
+            <p><i class="fa-solid fa-clock"></i> ВРЕМЕТРАЕНЕ: 130 мин.</p>
+            <br />
+            <p><i class="fa-solid fa-film"></i> 2D, IMAX</p>
+            <br />
+            <div class="time">
+              <p>Понеделник:</p>
+              <p class="box">21:00</p>
+            </div>
+            <p>англ.(СУБ: бълг.)</p>
+          </div>
+        </div>
+        <hr />
+        <br />
+        <div class="line" id="filmLine">
+          <div
+            onclick="window.location.href='aquamen-film.html';"
+            class="films"
+          >
+            <img
+              src="Images/AQUAMEN.jpg"
+              alt="Aquamen-film"
+              onmouseover="zoomIn(this)"
+              onmouseout="zoomOut(this)"
+            />
+          </div>
+          <div class="description">
+            <h3>АКВАМЕН И ИЗГУБЕНОТО КРАЛСТВО</h3>
+            <p>
+              <i class="fa-solid fa-calendar-days"></i> ПРЕМИЕРНА ДАТА 22
+              декември 2023
+            </p>
+            <br />
+            <p><i class="fa-solid fa-clock"></i> ВРЕМЕТРАЕНЕ: 124 мин.</p>
+            <br />
+            <p><i class="fa-solid fa-film"></i> 2D, 3D, IMAX, 4DX</p>
+            <br />
+            <div class="time">
+              <p>Вторник:</p>
+              <p class="box">17:15</p>
+              <p class="box">21:30</p>
+            </div>
+            <p>англ.(СУБ: бълг.)</p>
+          </div>
+        </div>
+        <hr />
+        <br />
+        <div class="line" id="filmLine">
+          <div onclick="window.location.href='argail-film.html';" class="films">
+            <img
+              src="Images/ARGAIL.webp"
+              alt="Argail-film"
+              onmouseover="zoomIn(this)"
+              onmouseout="zoomOut(this)"
+            />
+          </div>
+          <div class="description">
+            <h3>АРГАЙЛ: СУПЕРШПИОНИН</h3>
+            <p>
+              <i class="fa-solid fa-calendar-days"></i> ПРЕМИЕРНА ДАТА 02
+              февруари 2024
+            </p>
+            <br />
+            <p><i class="fa-solid fa-clock"></i> ВРЕМЕТРАЕНЕ: 139 мин.</p>
+            <br />
+            <p><i class="fa-solid fa-film"></i> 2D, IMAX, 4DX</p>
+            <br />
+            <div class="time">
+              <p>Сряда:</p>
+              <p class="box">15:10</p>
+              <p class="box">16:40</p>
+              <p class="box">18:00</p>
+              <p class="box">19:30</p>
+            </div>
+            <p>англ.(СУБ: бълг.)</p>
+          </div>
+        </div>
+        <hr />
+        <br />
+        <div class="line" id="filmLine">
+          <div onclick="window.location.href='charli-film.html';" class="films">
+            <img
+              src="Images/Byrziq charli.webp"
+              alt="Byrziq-Charli-film"
+              onmouseover="zoomIn(this)"
+              onmouseout="zoomOut(this)"
+            />
+          </div>
+          <div class="description">
+            <h3>БЪРЗИЯ ЧАРЛИ</h3>
+            <p>
+              <i class="fa-solid fa-calendar-days"></i> ПРЕМИЕРНА ДАТА 02
+              февруари 2024
+            </p>
+            <br />
+            <p><i class="fa-solid fa-clock"></i> ВРЕМЕТРАЕНЕ: 90 мин.</p>
+            <br />
+            <p><i class="fa-solid fa-film"></i> 2D</p>
+            <br />
+            <div class="time">
+              <p>Четвъртък:</p>
+              <p class="box">14:20</p>
+              <p class="box">16:20</p>
+              <p class="box">18:30</p>
+            </div>
+            <p>англ.(СУБ: бълг.)</p>
+          </div>
+        </div>
+        <hr />
+        <br />
+        <div class="line" id="filmLine">
+          <div onclick="window.location.href='miami-film.html';" class="films">
+            <img
+              src="Images/Miami.jpg"
+              alt="Miami-film"
+              onmouseover="zoomIn(this)"
+              onmouseout="zoomOut(this)"
+            />
+          </div>
+          <div class="description">
+            <h3>МАЯМИ БИЧ: ПОСОКА ЛОС АНДЖЕЛИС</h3>
+            <p>
+              <i class="fa-solid fa-calendar-days"></i> ПРЕМИЕРНА ДАТА 26 януари
+              2024
+            </p>
+            <br />
+            <p><i class="fa-solid fa-clock"></i> ВРЕМЕТРАЕНЕ: 102 мин.</p>
+            <br />
+            <p><i class="fa-solid fa-film"></i> 2D</p>
+            <br />
+            <div class="time">
+              <p>Петък:</p>
+              <p class="box">19:45</p>
+              <p class="box">22:00</p>
+            </div>
+            <p>рум.(СУБ: бълг.)</p>
+          </div>
+        </div>
+        <hr />
+        <br />
+        <div class="line" id="filmLine">
+          <div onclick="window.location.href='milyr-film.html';" class="films">
+            <img
+              src="Images/Milyr.webp"
+              alt="Milyr-film"
+              onmouseover="zoomIn(this)"
+              onmouseout="zoomOut(this)"
+            />
+          </div>
+          <div class="description">
+            <h3>МОМИЧЕТО НА МИЛЪР</h3>
+            <p>
+              <i class="fa-solid fa-calendar-days"></i> ПРЕМИЕРНА ДАТА 26 януари
+              2024
+            </p>
+            <br />
+            <p><i class="fa-solid fa-clock"></i> ВРЕМЕТРАЕНЕ: 93 мин.</p>
+            <br />
+            <p><i class="fa-solid fa-film"></i> 2D</p>
+            <br />
+            <div class="time">
+              <p>Събота:</p>
+              <p class="box">16:50</p>
+              <p class="box">19:20</p>
+              <p class="box">21:20</p>
+            </div>
+            <p>англ.(СУБ: бълг.)</p>
+          </div>
+        </div>
+        <hr />
+        <br />
+        <div class="line" id="filmLine">
+          <div onclick="window.location.href='wonka-film.html';" class="films">
+            <img
+              src="Images/Wonka.jpg"
+              alt="Wonka-film"
+              onmouseover="zoomIn(this)"
+              onmouseout="zoomOut(this)"
+            />
+          </div>
+          <div class="description">
+            <h3>УОНКА</h3>
+            <p>
+              <i class="fa-solid fa-calendar-days"></i> ПРЕМИЕРНА ДАТА 15
+              декември 2023
+            </p>
+            <br />
+            <p><i class="fa-solid fa-clock"></i> ВРЕМЕТРАЕНЕ: 112 мин.</p>
+            <br />
+            <p><i class="fa-solid fa-film"></i> 2D, IMAX, 4DX</p>
+            <br />
+            <div class="time">
+              <p>Неделя:</p>
+              <p class="box">16:00</p>
+              <p class="box">18:20</p>
+            </div>
+            <p>(ДУБ: бълг.)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------FOOTER------------------->
+    <footer>
+      <div class="footer-col">
+        <div class="contact-logo">
+          <h3>ЗА НАС</h3>
+          <a href="index.html"
+            ><img src="Images/cinema-logo.png" alt="Cinema-logo"
+          /></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Прожекции</h3>
+        <li><a href="2D-projekciq.html">2D</a></li>
+        <li><a href="3D-projekciq.html">3D</a></li>
+        <li><a href="IMAX-projekciq.html">IMAX</a></li>
+        <li><a href="4DX-projekciq.html">4DX</a></li>
+      </div>
+      <div class="footer-col">
+        <h3>Оферти</h3>
+        <li><a href="promo1.html">3D Промо вторник</a></li>
+        <li><a href="promo2.html">Намален 2D четвъртък</a></li>
+        <li><a href="promo3.html">Рожден ден на кино</a></li>
+        <li><a href="promo4.html">Филмови оферти</a></li>
+        <li><a href="promo5.html">Групови резерваци</a>и</li>
+        <li><a href="promo6.html">Наем на зала</a></li>
+        <li><a href="promo7.html">Ваучери за компании</a></li>
+      </div>
+      <div class="footer-col">
+        <h3>Свържи се с нас</h3>
+
+        <div class="subscribe">
+          <input type="text" name="" placeholder="Имейл" id="" />
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Напиши съобщение"
+          ></textarea>
+          <a class="red" href="#">Изпрати</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          Copyright &copy; 2024 All rights reseved | This website is made by
+          Desislava Dimitrova
+        </p>
+        <div class="links">
+          <i
+            class="fab fa-facebook-f"
+            onclick="openSocialMedia('https://www.facebook.com/')"
+          ></i>
+          <i
+            class="fab fa-instagram"
+            onclick="openSocialMedia('https://www.instagram.com/')"
+          ></i>
+          <i
+            class="fab fa-linkedin-in"
+            onclick="openSocialMedia('https://www.linkedin.com/')"
+          ></i>
+        </div>
+      </div>
+    </footer>
+    <button id="scrollToTopBtn" aria-label="Scroll to Top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <script defer src="nav-links.js"></script>
+    <script defer src="index.js"></script>
+  </body>
+</html>
